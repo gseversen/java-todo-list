@@ -1,10 +1,12 @@
 package todoList;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class todoList {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	Scanner stdIn = new Scanner(System.in);
+	ArrayList<task> list = new ArrayList();
+	
+	
 }
