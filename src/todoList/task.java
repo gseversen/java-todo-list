@@ -1,9 +1,9 @@
 package todoList;
 
 public class task {
-	String name;
-	boolean completed;
-	String info;
+	private String name;
+	private boolean completed;
+	private String info;
 	
 	public task()
 	{
@@ -17,5 +17,35 @@ public class task {
 		this.name = label;
 		this.completed = done;
 		this.info = description;
+	}
+	
+	public String getName()
+	{
+		return this.name;
+	}
+	
+	public boolean getStatus()
+	{
+		return this.completed;
+	}
+	
+	public String getDetails()
+	{
+		return this.info;
+	}
+	
+	public void setName(String newName)
+	{
+		this.name = newName;
+	}
+	
+	public void setStatus(boolean status)
+	{
+		this.completed = status;
+	}
+	
+	public void setDetails(String detail)
+	{
+		this.info = detail;
 	}
 }//end of class task
