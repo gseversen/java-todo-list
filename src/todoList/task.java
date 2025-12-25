@@ -19,6 +19,12 @@ public class task {
 		this.info = description;
 	}
 	
+	public task(String label, String description)
+	{
+		this.name = label;
+		this.info = description;
+	}
+	
 	public String getName()
 	{
 		return this.name;
