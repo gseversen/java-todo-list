@@ -51,6 +51,11 @@ public class todoList {
 	
 	public static void printList(ArrayList<task> list)
 	{
+		if (list.isEmpty()) {
+	        System.out.println("No tasks to display.");
+	        return;
+	    }
+		
 		for(task t : list)
 		{
 			System.out.println(t.toString());
