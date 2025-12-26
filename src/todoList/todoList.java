@@ -29,20 +29,71 @@ public class todoList {
 			//option 1
 			if(response == 1)
 			{
-				System.out.print("Name of task to add: ");
-				String name = stdIn.nextLine();
-				
-				System.out.print("Description of task: ");
-				String details = stdIn.nextLine();
-				
-				task newTask = new task(name, details);
-				list.add(newTask);
+				addTask(stdIn);
+			}
+			else if(response == 2)
+			{
+				changeTaskName(stdIn);
+			}
+			else if(response == 3) 
+			{
 				
 			}
 			
 			
-		}
+		}//end of while loop
 	}//end of main
+	
+	/**
+	 * Reads a name from the user to add to the list
+	 * <p>
+	 * This method reads a name and description of a task
+	 * to be added to the todo list.
+	 * @param in Scanner used to read input
+	 */
+	public static void addTask(Scanner in) {
+		System.out.print("Name of task to add: ");
+		String name = stdIn.nextLine();
+		
+		System.out.print("Description of task: ");
+		String details = stdIn.nextLine();
+		
+		task newTask = new task(name, details);
+		list.add(newTask);
+		System.out.println("Added: " + newTask.toString());
+	}
+	
+	/**
+	 * Reads a task name from the user to change in the list
+	 * <p>
+	 * This method prompts the user for a name of an existing task
+	 * to change within the list. If there is nothing in the list or 
+	 * it cannot find the name it will let the user know.
+	 * @param in Scanner used to read input
+	 */
+	public static void changeTaskName(Scanner in) {
+	    if (list.isEmpty()) {
+	        System.out.println("No tasks to change.");
+	        return;
+	    }
+
+	    System.out.print("Name of task to change: ");
+	    String oldName = in.nextLine();
+
+	    for (task t : list) {
+	        if (t.getName().equals(oldName)) {
+
+	            System.out.print("Enter new task name: ");
+	            String newName = in.nextLine();
+
+	            t.setName(newName);
+	            System.out.println("Task renamed to: " + t.getName());
+	            return; // done
+	        }
+	    }
+
+	    System.out.println("Task not found: " + oldName);
+	}
 	
 	/**
 	 * Reads and validates a numeric menu choice from the user.
@@ -65,7 +116,11 @@ public class todoList {
 	        }
 	        int val = in.nextInt();
 	        in.nextLine();
-	        if (val >= min && val <= max) return val;
+	        if (!(val >= min && val <= max)) {
+	        	System.out.print("Choose a number listed");
+	        }else {
+	        	return val;
+	        }
 		}
 	}//end of getMenuChoice
 	

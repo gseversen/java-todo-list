@@ -40,18 +40,38 @@ public class task {
 		return this.info;
 	}
 	
+	//change task name
 	public void setName(String newName)
 	{
 		this.name = newName;
 	}
 	
+	//mark task as done or not
 	public void setStatus(boolean status)
 	{
 		this.completed = status;
 	}
 	
+	//set detail variable
 	public void setDetails(String detail)
 	{
 		this.info = detail;
 	}
+	
+	public String toString() {
+		String incomplete = "[ ] ";
+		String complete = "[X] ";
+		
+		if(this.getStatus() == false)
+		{
+			return incomplete + this.getName();
+		}
+		else
+		{
+			return complete + this.getName();
+		}
+	}
 }//end of class task
+
+
+
