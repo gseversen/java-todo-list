@@ -49,13 +49,13 @@ Task
   - A task name cannot be found
   - Invalid input is entered
 
-# Example Output
+## Example Output
 Added: [ ] Study for exam
 Task renamed to: Study for CS exam
 Task marked as complete true
 [X] Study for CS exam
 
-How to Run
+## How to Run
 
 1. Clone the repository:
 
@@ -67,7 +67,7 @@ git clone https://github.com/your-username/java-todo-list.git
 
 4. Follow the on-screen menu prompts
 
-# Concepts Used
+## Concepts Used
 - Object-Oriented Programming (OOP)
 - Java ArrayList
 - Encapsulation
@@ -75,7 +75,7 @@ git clone https://github.com/your-username/java-todo-list.git
 - Input validation
 - Console-based user interaction
 
-# Possible Future Improvements
+## Possible Future Improvements
 - Assign unique IDs to tasks instead of using names
 - Allow editing task descriptions
 - Persist tasks using file I/O
