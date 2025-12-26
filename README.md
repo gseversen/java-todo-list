@@ -48,3 +48,40 @@ Task
   - The task list is empty
   - A task name cannot be found
   - Invalid input is entered
+
+# Example Output
+Added: [ ] Study for exam
+Task renamed to: Study for CS exam
+Task marked as complete true
+[X] Study for CS exam
+
+How to Run
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/java-todo-list.git
+
+2. Open the project in Eclipse (or another Java IDE)
+
+3. Run the todoList class
+
+4. Follow the on-screen menu prompts
+
+# Concepts Used
+- Object-Oriented Programming (OOP)
+- Java ArrayList
+- Encapsulation
+- Method decomposition
+- Input validation
+- Console-based user interaction
+
+# Possible Future Improvements
+- Assign unique IDs to tasks instead of using names
+- Allow editing task descriptions
+- Persist tasks using file I/O
+- Add a GUI (JavaFX or Swing)
+- Connect to a web frontend
+
+# Author
+Gunnar Seversen
+CS Student – Java & Data Structures
