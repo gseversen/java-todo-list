@@ -4,14 +4,14 @@ Users can add tasks, edit task names, mark tasks as completed, and display all t
 
 This project focuses on object oriented design, input validation, and clean method decomposition
 
-# Features
+## Features
 - Add new tasks
 - Change the name of an existing task
 - Mark tasks as completed
 - Display all tasks with completion status
 - Robust input validation (prevents crashes from invalid input)
 
-# Menu Options and Format
+## Menu Options and Format
 ----------------------------
 Select a choice
 1. Add Task
@@ -27,7 +27,7 @@ Tasks are displayed using the following format
 [ ] -> incomplete task
 [X] -> completed task
 
-# Design Overview
+## Design Overview
 
 Classes
 
