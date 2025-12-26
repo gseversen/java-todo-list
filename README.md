@@ -40,3 +40,11 @@ Task
 - Represents a single task
 - Stores: task name and completion status
 - Provides getters, setters, and a formatted toString() method
+
+## Input Validation
+- Menu input is validated using Scanner.hasNextInt() to prevent InputMismatchException
+- Menu choices are restricted to a valid range
+- Graceful feedback is provided when:
+  - The task list is empty
+  - A task name cannot be found
+  - Invalid input is entered
