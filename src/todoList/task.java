@@ -3,26 +3,22 @@ package todoList;
 public class task {
 	private String name;
 	private boolean completed;
-	private String info;
 	
 	public task()
 	{
 		name = null;
 		completed = false;
-		info = null;
 	}
 	
-	public task(String label, boolean done, String description)
+	public task(String label, boolean done)
 	{
 		this.name = label;
 		this.completed = done;
-		this.info = description;
 	}
 	
-	public task(String label, String description)
+	public task(String label)
 	{
 		this.name = label;
-		this.info = description;
 	}
 	
 	public String getName()
@@ -35,11 +31,6 @@ public class task {
 		return this.completed;
 	}
 	
-	public String getDetails()
-	{
-		return this.info;
-	}
-	
 	//change task name
 	public void setName(String newName)
 	{
@@ -50,12 +41,6 @@ public class task {
 	public void setStatus(boolean status)
 	{
 		this.completed = status;
-	}
-	
-	//set detail variable
-	public void setDetails(String detail)
-	{
-		this.info = detail;
 	}
 	
 	public String toString() {

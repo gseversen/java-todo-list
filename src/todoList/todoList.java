@@ -24,25 +24,60 @@ public class todoList {
 			
 			//user input
 			response = getMenuChoice(stdIn, MIN_MENU_CHOICE, MAX_MENU_CHOICE);
-			System.out.println(response);
 			
 			//option 1
 			if(response == 1)
 			{
 				addTask(stdIn);
 			}
+			//option 2
 			else if(response == 2)
 			{
 				changeTaskName(stdIn);
 			}
+			//option 3
 			else if(response == 3) 
 			{
-				
+				markAsCompleted(stdIn);
+			}
+			else if(response == 4)
+			{
+				printList(list);
 			}
 			
 			
 		}//end of while loop
 	}//end of main
+	
+	public static void printList(ArrayList<task> list)
+	{
+		for(task t : list)
+		{
+			System.out.println(t.toString());
+		}
+	}
+	
+	public static void markAsCompleted(Scanner in)
+	{
+		if (list.isEmpty()) {
+	        System.out.println("No tasks to change.");
+	        return;
+	    }
+
+	    System.out.print("Name of task to change: ");
+	    String oldName = in.nextLine();
+
+	    for (task t : list) {
+	        if (t.getName().equals(oldName)) {
+
+	            t.setStatus(true);
+	            System.out.println("Task marked as complete " + t.getStatus());
+	            return; // done
+	        }
+	    }
+
+	    System.out.println("Task not found: " + oldName);
+	}
 	
 	/**
 	 * Reads a name from the user to add to the list
@@ -55,10 +90,7 @@ public class todoList {
 		System.out.print("Name of task to add: ");
 		String name = stdIn.nextLine();
 		
-		System.out.print("Description of task: ");
-		String details = stdIn.nextLine();
-		
-		task newTask = new task(name, details);
+		task newTask = new task(name);
 		list.add(newTask);
 		System.out.println("Added: " + newTask.toString());
 	}
