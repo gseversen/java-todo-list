@@ -20,6 +20,7 @@ Select a choice
 4. Show all tasks
 ----------------------------
 Tasks are displayed using the following format
+
 [ ] Buy groceries
 [X] Finish homework
 
